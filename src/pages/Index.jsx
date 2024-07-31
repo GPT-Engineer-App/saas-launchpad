@@ -103,6 +103,49 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              What Our Customers Say
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Don't just take our word for it - hear from some of our satisfied customers!
+            </p>
+          </div>
+          <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: "Sarah Johnson",
+                role: "CEO, TechStart",
+                quote: "SaaSify has revolutionized our workflow. We've seen a 40% increase in productivity since implementing it.",
+              },
+              {
+                name: "Michael Chen",
+                role: "CTO, InnovateCorp",
+                quote: "The security features of SaaSify give us peace of mind. It's robust, reliable, and incredibly user-friendly.",
+              },
+              {
+                name: "Emily Rodriguez",
+                role: "Operations Manager, GrowthHub",
+                quote: "Customer support is outstanding. Any questions we've had were addressed promptly and thoroughly.",
+              },
+            ].map((testimonial, index) => (
+              <Card key={index} className="flex flex-col justify-between">
+                <CardContent className="pt-6">
+                  <blockquote className="text-lg text-gray-500 italic">"{testimonial.quote}"</blockquote>
+                  <div className="mt-6">
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
