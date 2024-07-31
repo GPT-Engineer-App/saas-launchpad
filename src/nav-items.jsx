@@ -1,4 +1,4 @@
-import { Home, Info, PricingTable, MessageSquare } from "lucide-react";
+import { Home, Info, MessageSquare } from "lucide-react";
 import Index from "./pages/Index.jsx";
 
 /**
@@ -20,7 +20,7 @@ export const navItems = [
   {
     title: "Pricing",
     to: "/pricing",
-    icon: <PricingTable className="h-4 w-4" />,
+    icon: <Info className="h-4 w-4" />,
     page: <div>Pricing Page</div>,
   },
   {
